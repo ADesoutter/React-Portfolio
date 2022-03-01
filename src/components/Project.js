@@ -1,24 +1,13 @@
-import { useState } from 'react';
-
-export default function Project() {
-
-    const [projects, setProjects] = useState ([
-        { title: "My first Project", body: "lorem ipsum ...", id: 1 },
-        { title: "My second Project", body: "lorem ipsum ...", id: 2 },
-        { title: "My third Project", body: "lorem ipsum ...", id: 3 },
-    ])
-
-    // const handleDelete() => {
-
-    // }
+export default function Project( { projects, title, handleDelete } ) {
 
   return (
-    <div className="projects">
+    <div className="project-list">
+      <h2>{ title }</h2>
       {projects.map((project) => (
         <div className="project-preview" key={project.id}>
-          <h2>{project.title}</h2>
+          <h3>{project.title}</h3>
           <p>{project.body}</p>
-          {/* <button onClick={() => handleDelete(project.id)}>Delete Project</button> */}
+          <button onClick={() => handleDelete(project.id)}>Delete Project</button>
         </div>
       ))}
     </div>
