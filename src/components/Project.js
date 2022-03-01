@@ -1,4 +1,6 @@
-export default function Project( { projects, title, handleDelete } ) {
+import '../styles/project.css';
+
+export default function Project( { projects, title } ) {
 
   return (
     <div className="project-list">
@@ -6,8 +8,7 @@ export default function Project( { projects, title, handleDelete } ) {
       {projects.map((project) => (
         <div className="project-preview" key={project.id}>
           <h3>{project.title}</h3>
-          <p>{project.body}</p>
-          <button onClick={() => handleDelete(project.id)}>Delete Project</button>
+          <p>{project.description}</p>
         </div>
       ))}
     </div>
