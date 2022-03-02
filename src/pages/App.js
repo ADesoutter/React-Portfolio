@@ -1,7 +1,8 @@
-import './App.css';
-import Navbar from "./components/Navbar";
+import '../styles/App.css';
+import Navbar from "../components/Navbar";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
+import ProjectDetails from './ProjectDetails';
 // import axios from 'axios';
 
 function App() {
@@ -13,8 +14,11 @@ function App() {
         <Navbar />
           <div className="content">
             <Switch>
-              <Route path="/">
+              <Route exact path="/">
                 <Home />
+              </Route>
+              <Route path="/projects/:id">
+                <ProjectDetails />
               </Route>
             </Switch>
           </div>

@@ -1,5 +1,5 @@
-import Project from "./components/Project";
-import useFetch from "./useFetch";
+import Project from "../components/ProjectList";
+import useFetch from "../components/useFetch";
 
 export default function Home() {
 
