@@ -2,7 +2,6 @@ import Project from "../components/ProjectList";
 import useFetch from "../components/useFetch";
 
 export default function Home() {
-
     const {data: projects, error} = useFetch("http://localhost:8000/projects")
 
   return (

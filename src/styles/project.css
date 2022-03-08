@@ -1,4 +1,4 @@
-.project-preview {
+  .project-preview {
     padding: 10px 16px;
     margin: 20px 0;
     border-bottom: 1px solid #fafafa;
@@ -10,4 +10,7 @@
     font-size: 20px;
     color: #f1356d;
     margin-bottom: 8px;
+  }
+  .project-preview a{
+    text-decoration: none;
   }
